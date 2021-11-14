@@ -1,9 +1,8 @@
 def question():
     iterations = 0
     while iterations <= 2:
-        iterations = input("How big do you want the list?")
+        iterations = int(input("How big do you want the list?"))
         try:
-            iterations = int(iterations)
             if iterations <= 2:
                 print("Choose an integer greater than 2")
             else:

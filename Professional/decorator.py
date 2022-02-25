@@ -5,6 +5,6 @@ def mayusculas(func):
 
 @mayusculas
 def mensaje(nombre):
-    return f'{nombre}, recibiste un mensaje'
+    return f'{nombre}, you got a message'
 
 print(mensaje('Cesar'))

@@ -1,12 +1,12 @@
 from datetime import datetime
 
 def execution_time(func):
-    def wrapper(*args,**kwargs):    #*argumentos posicionales,*argumentos nombrados
+    def wrapper(*args,**kwargs):    #*positional arguments,*named arguments
         initial_time = datetime.now()
         func(*args,**kwargs)
         final_time =datetime.now()
         time_elapsed = final_time - initial_time
-        print("Pasaron " + str(time_elapsed.total_seconds()) + " segundos")
+        print(str(time_elapsed.total_seconds()) + " seconds had passed")
     return wrapper
 
 @execution_time
@@ -15,13 +15,13 @@ def random_func():
         pass
 
 @execution_time
-def suma(a: int, b: int) -> int:
+def sum(a: int, b: int) -> int:
     return a + b
 
 @execution_time
-def saludo(nombre = "Cesar"):
+def greeting(nombre = "Cesar"):
     print("Hola " + nombre)
 
 random_func()
-suma(5, 5)
-saludo("David")
+sum(5, 5)
+greeting("David")

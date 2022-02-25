@@ -1,6 +1,6 @@
 def make_division_by(n):
     def divisor(integer):
-        assert type(integer) == int, "Solo puedes utilizar números enteros"
+        assert type(integer) == int, "You can only use integer numbers"
         return integer / n
     return divisor
 

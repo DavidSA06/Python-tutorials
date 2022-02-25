@@ -8,18 +8,18 @@ def prime_number(number: int) -> bool:
 def run():
     n: int = 0
     while n <= 1:
-        n: int = int(input('Escribe un número entero positivo'))
+        n: int = int(input('Write a positive integer'))
         try:            
             if n < 1:
-                raise ValueError("No puedo determinar la primalidad de este número")
+                raise ValueError("I cannot determine the primality of this number")
             if prime_number(n):
-                print("Es primo")
+                print("It is a prime number")
             else:
-                print("No es primo")
+                print("It is not a prime number")
         except ValueError:
-            print ("Debes escribir un número mayor a 0")
+            print ("You must write a number greater than 0")
         finally:
-            print("Instrucción Finally usada, usualmente un 'f.close ()' es implementado")        
+            print("'finally' instruction used, usually a 'f.close ()' is implemented")        
     
 
 if __name__ == '__main__':
